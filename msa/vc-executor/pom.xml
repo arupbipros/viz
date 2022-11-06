@@ -7,11 +7,11 @@
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
-    <groupId>org.thingsboard.msa</groupId>
+    <groupId>com.vizzionnaire.msa</groupId>
     <artifactId>vc-executor</artifactId>
 
-    <name>Thingsboard Version Control Executor</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Version Control Executor</name>
+    <url>https://vizzionnaire.io</url>
     <description>Project for Thingsboard version control microservice</description>
 
     <properties>

@@ -6,12 +6,12 @@
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
-    <groupId>org.thingsboard.msa</groupId>
+    <groupId>com.vizzionnaire.msa</groupId>
     <artifactId>js-executor</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard JavaScript Executor Microservice</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire JavaScript Executor Microservice</name>
+    <url>https://vizzionnaire.io</url>
     <description>Service executing JavaScript functions in sandboxed environment</description>
 
     <properties>

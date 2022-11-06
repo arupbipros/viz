@@ -7,11 +7,11 @@
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
-    <groupId>org.thingsboard.msa</groupId>
+    <groupId>com.vizzionnaire.msa</groupId>
     <artifactId>black-box-tests</artifactId>
 
-    <name>Thingsboard Black Box Tests</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Black Box Tests</name>
+    <url>https://vizzionnaire.io</url>
     <description>Project for Thingsboard black box testing with using Docker</description>
 
     <properties>
@@ -89,42 +89,42 @@
             <artifactId>rest-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa</groupId>
+            <groupId>com.vizzionnaire.msa</groupId>
             <artifactId>js-executor</artifactId>
             <type>docker-info</type>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa</groupId>
+            <groupId>com.vizzionnaire.msa</groupId>
             <artifactId>web-ui</artifactId>
             <type>docker-info</type>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa</groupId>
+            <groupId>com.vizzionnaire.msa</groupId>
             <artifactId>tb-node</artifactId>
             <type>docker-info</type>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa.transport</groupId>
+            <groupId>com.vizzionnaire.msa.transport</groupId>
             <artifactId>coap</artifactId>
             <type>docker-info</type>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa.transport</groupId>
+            <groupId>com.vizzionnaire.msa.transport</groupId>
             <artifactId>http</artifactId>
             <type>docker-info</type>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa.transport</groupId>
+            <groupId>com.vizzionnaire.msa.transport</groupId>
             <artifactId>mqtt</artifactId>
             <type>docker-info</type>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa.transport</groupId>
+            <groupId>com.vizzionnaire.msa.transport</groupId>
             <artifactId>lwm2m</artifactId>
             <type>docker-info</type>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.msa.transport</groupId>
+            <groupId>com.vizzionnaire.msa.transport</groupId>
             <artifactId>snmp</artifactId>
             <type>docker-info</type>
         </dependency>

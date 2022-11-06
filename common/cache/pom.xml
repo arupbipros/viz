@@ -10,8 +10,8 @@
     <artifactId>cache</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server Common Cache</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Server Common Cache</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

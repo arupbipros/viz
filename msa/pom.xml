@@ -9,8 +9,8 @@
     <artifactId>msa</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard Microservices</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Microservices</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <main.dir>${basedir}/..</main.dir>

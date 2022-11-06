@@ -9,8 +9,8 @@
     <artifactId>application</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server Application</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Server Application</name>
+    <url>https://vizzionnaire.io</url>
     <description>Open-source IoT Platform - Device management, data collection, processing and visualization
     </description>
 

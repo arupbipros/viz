@@ -6,13 +6,13 @@
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
-    <groupId>org.thingsboard.msa</groupId>
+    <groupId>com.vizzionnaire.msa</groupId>
     <artifactId>vc-executor-docker</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard Version Control Executor Microservice</name>
-    <url>https://thingsboard.io</url>
-    <description>Thingsboard Version Control Executor Microservice</description>
+    <name>Vizzionnaire Version Control Executor Microservice</name>
+    <url>https://vizzionnaire.io</url>
+    <description>Vizzionnaire Version Control Executor Microservice</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,7 +26,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.thingsboard.msa</groupId>
+            <groupId>com.vizzionnaire.msa</groupId>
             <artifactId>vc-executor</artifactId>
             <version>${project.version}</version>
             <classifier>deb</classifier>
@@ -50,7 +50,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.thingsboard.msa</groupId>
+                                    <groupId>com.vizzionnaire.msa</groupId>
                                     <artifactId>vc-executor</artifactId>
                                     <classifier>deb</classifier>
                                     <type>deb</type>

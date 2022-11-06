@@ -6,8 +6,8 @@
     <version>3.4.1</version>
     <packaging>pom</packaging>
 
-    <name>Thingsboard</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire</name>
+    <url>https://vizzionnaire.io</url>
     <inceptionYear>2016</inceptionYear>
 
     <properties>
@@ -821,7 +821,7 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>transport</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -893,56 +893,56 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa</groupId>
+                <groupId>com.vizzionnaire.msa</groupId>
                 <artifactId>js-executor</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa</groupId>
+                <groupId>com.vizzionnaire.msa</groupId>
                 <artifactId>web-ui</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa</groupId>
+                <groupId>com.vizzionnaire.msa</groupId>
                 <artifactId>tb-node</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa.transport</groupId>
+                <groupId>com.vizzionnaire.msa.transport</groupId>
                 <artifactId>coap</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa.transport</groupId>
+                <groupId>com.vizzionnaire.msa.transport</groupId>
                 <artifactId>http</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa.transport</groupId>
+                <groupId>com.vizzionnaire.msa.transport</groupId>
                 <artifactId>mqtt</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa.transport</groupId>
+                <groupId>com.vizzionnaire.msa.transport</groupId>
                 <artifactId>lwm2m</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.msa.transport</groupId>
+                <groupId>com.vizzionnaire.msa.transport</groupId>
                 <artifactId>snmp</artifactId>
                 <version>${project.version}</version>
                 <type>docker-info</type>

@@ -6,12 +6,12 @@
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
-    <groupId>org.thingsboard.msa</groupId>
+    <groupId>com.vizzionnaire.msa</groupId>
     <artifactId>transport</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard Transport Microservices</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Transport Microservices</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <main.dir>${basedir}/../..</main.dir>

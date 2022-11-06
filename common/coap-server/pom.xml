@@ -12,8 +12,8 @@
     <artifactId>coap-server</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard CoAP server</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire CoAP server</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

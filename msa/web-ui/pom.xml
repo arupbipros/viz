@@ -6,12 +6,12 @@
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
-    <groupId>org.thingsboard.msa</groupId>
+    <groupId>com.vizzionnaire.msa</groupId>
     <artifactId>web-ui</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard Web UI Microservice</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Web UI Microservice</name>
+    <url>https://vizzionnaire.io</url>
     <description>Service for hosting Thingsboard Web UI</description>
 
     <properties>

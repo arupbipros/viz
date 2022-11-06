@@ -6,13 +6,13 @@
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
-    <groupId>org.thingsboard.msa</groupId>
+    <groupId>com.vizzionnaire.msa</groupId>
     <artifactId>tb</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard Docker Images</name>
-    <url>https://thingsboard.io</url>
-    <description>Thingsboard Docker Images</description>
+    <name>Vizzionnaire Docker Images</name>
+    <url>https://vizzionnaire.io</url>
+    <description>Vizzionnaire Docker Images</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

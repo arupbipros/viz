@@ -9,8 +9,8 @@
     <artifactId>common</artifactId>
     <packaging>pom</packaging>
 
-    <name>Thingsboard Server Commons</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Server Commons</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

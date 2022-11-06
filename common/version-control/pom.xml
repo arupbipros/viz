@@ -10,8 +10,8 @@
     <artifactId>version-control</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server Version Control API</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Server Version Control API</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

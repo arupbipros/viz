@@ -10,8 +10,8 @@
     <artifactId>cluster-api</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Server Common Cluster API</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Server Common Cluster API</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

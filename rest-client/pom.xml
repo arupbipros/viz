@@ -9,8 +9,8 @@
     <artifactId>rest-client</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard Rest Client</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire Rest Client</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
