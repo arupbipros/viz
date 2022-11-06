@@ -27,7 +27,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.thingsboard.transport</groupId>
+            <groupId>com.vizzionnaire.transport</groupId>
             <artifactId>snmp</artifactId>
             <version>${project.version}</version>
             <classifier>deb</classifier>
@@ -51,7 +51,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.thingsboard.transport</groupId>
+                                    <groupId>com.vizzionnaire.transport</groupId>
                                     <artifactId>snmp</artifactId>
                                     <classifier>deb</classifier>
                                     <type>deb</type>

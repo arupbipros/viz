@@ -8,12 +8,12 @@
         <artifactId>transport</artifactId>
     </parent>
 
-    <groupId>org.thingsboard.transport</groupId>
+    <groupId>com.vizzionnaire.transport</groupId>
     <artifactId>snmp</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard SNMP Transport Service</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire SNMP Transport Service</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,7 +25,7 @@
         <pkg.name>tb-snmp-transport</pkg.name>
         <pkg.copyInstallScripts>false</pkg.copyInstallScripts>
         <pkg.win.dist>${project.build.directory}/windows</pkg.win.dist>
-        <pkg.implementationTitle>ThingsBoard SNMP Transport Service</pkg.implementationTitle>
+        <pkg.implementationTitle>Vizzionnaire SNMP Transport Service</pkg.implementationTitle>
         <pkg.mainClass>org.thingsboard.server.snmp.ThingsboardSnmpTransportApplication</pkg.mainClass>
     </properties>
 

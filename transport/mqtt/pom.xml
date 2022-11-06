@@ -6,12 +6,12 @@
         <version>3.4.1</version>
         <artifactId>transport</artifactId>
     </parent>
-    <groupId>org.thingsboard.transport</groupId>
+    <groupId>com.vizzionnaire.transport</groupId>
     <artifactId>mqtt</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard MQTT Transport Service</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire MQTT Transport Service</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,7 +23,7 @@
         <pkg.name>tb-mqtt-transport</pkg.name>
         <pkg.copyInstallScripts>false</pkg.copyInstallScripts>
         <pkg.win.dist>${project.build.directory}/windows</pkg.win.dist>
-        <pkg.implementationTitle>ThingsBoard MQTT Transport Service</pkg.implementationTitle>
+        <pkg.implementationTitle>Vizzionnaire MQTT Transport Service</pkg.implementationTitle>
         <pkg.mainClass>org.thingsboard.server.mqtt.ThingsboardMqttTransportApplication</pkg.mainClass>
     </properties>
 

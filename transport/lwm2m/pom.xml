@@ -6,12 +6,12 @@
         <version>3.4.1</version>
         <artifactId>transport</artifactId>
     </parent>
-    <groupId>org.thingsboard.transport</groupId>
+    <groupId>com.vizzionnaire.transport</groupId>
     <artifactId>lwm2m</artifactId>
     <packaging>jar</packaging>
 
-    <name>Thingsboard LwM2m Transport Service</name>
-    <url>https://thingsboard.io</url>
+    <name>Vizzionnaire LwM2m Transport Service</name>
+    <url>https://vizzionnaire.io</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,7 +23,7 @@
         <pkg.name>tb-lwm2m-transport</pkg.name>
         <pkg.copyInstallScripts>false</pkg.copyInstallScripts>
         <pkg.win.dist>${project.build.directory}/windows</pkg.win.dist>
-        <pkg.implementationTitle>ThingsBoard LwM2m Transport Service</pkg.implementationTitle>
+        <pkg.implementationTitle>Vizzionnaire LwM2m Transport Service</pkg.implementationTitle>
         <pkg.mainClass>org.thingsboard.server.lwm2m.ThingsboardLwm2mTransportApplication</pkg.mainClass>
     </properties>
 
@@ -106,10 +106,6 @@
             <groupId>org.eclipse.californium</groupId>
             <artifactId>californium-core</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.eclipse.californium</groupId>-->
-<!--            <artifactId>scandium</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.eclipse.californium</groupId>
             <artifactId>element-connector</artifactId>
