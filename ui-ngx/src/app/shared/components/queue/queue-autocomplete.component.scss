@@ -1,0 +1,13 @@
+::ng-deep {
+  .queue-option {
+    .mat-option-text {
+      display: inline;
+    }
+    .queue-option-description {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

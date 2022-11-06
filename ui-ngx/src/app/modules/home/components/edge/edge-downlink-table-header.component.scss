@@ -1,0 +1,26 @@
+@import '../../../../../scss/constants';
+
+:host {
+  padding-right: 8px;
+}
+
+:host ::ng-deep {
+  mat-form-field {
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0;
+    }
+
+    .mat-form-field-underline {
+      bottom: 0;
+    }
+
+    @media #{$mat-xs} {
+      width: 100%;
+
+      .mat-form-field-infix {
+        width: auto !important;
+      }
+    }
+  }
+}

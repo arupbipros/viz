@@ -1,0 +1,20 @@
+<div fxLayout="row" class="tb-entity-select" [formGroup]="entitySelectFormGroup">
+  <tb-entity-type-select
+    style="min-width: 100px; padding-right: 8px;"
+    *ngIf="displayEntityTypeSelect"
+    [showLabel]="true"
+    [required]="required"
+    [useAliasEntityTypes]="useAliasEntityTypes"
+    [allowedEntityTypes]="allowedEntityTypes"
+    formControlName="entityType">
+  </tb-entity-type-select>
+  <tb-entity-autocomplete
+    fxFlex
+    *ngIf="modelValue.entityType && modelValue.entityType !== AliasEntityType.CURRENT_TENANT
+                                 && modelValue.entityType !== AliasEntityType.CURRENT_USER
+                                 && modelValue.entityType !== AliasEntityType.CURRENT_USER_OWNER"
+    [required]="required"
+    [entityType]="modelValue.entityType"
+    formControlName="entityId">
+  </tb-entity-autocomplete>
+</div>

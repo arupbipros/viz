@@ -1,0 +1,25 @@
+<section class="tb-widget-settings" [formGroup]="updateBooleanAttributeWidgetSettingsForm">
+  <fieldset class="fields-group">
+    <legend class="group-title" translate>widgets.input-widgets.general-settings</legend>
+    <mat-form-field fxFlex class="mat-block">
+      <mat-label translate>widgets.input-widgets.widget-title</mat-label>
+      <input matInput formControlName="widgetTitle">
+    </mat-form-field>
+    <mat-slide-toggle formControlName="showResultMessage" class="slide-block">
+      {{ 'widgets.input-widgets.show-result-message' | translate }}
+    </mat-slide-toggle>
+  </fieldset>
+  <fieldset class="fields-group">
+    <legend class="group-title" translate>widgets.input-widgets.checkbox-settings</legend>
+    <section class="row-fill" fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="start center">
+      <mat-form-field fxFlex class="mat-block">
+        <mat-label translate>widgets.input-widgets.true-label</mat-label>
+        <input matInput formControlName="trueValue">
+      </mat-form-field>
+      <mat-form-field fxFlex class="mat-block">
+        <mat-label translate>widgets.input-widgets.false-label</mat-label>
+        <input matInput formControlName="falseValue">
+      </mat-form-field>
+    </section>
+  </fieldset>
+</section>

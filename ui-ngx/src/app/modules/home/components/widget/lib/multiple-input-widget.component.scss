@@ -1,0 +1,65 @@
+:host {
+
+  .tb-multiple-input {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .fields-group {
+      padding: 0 8px;
+      margin: 10px 0;
+      border: 1px groove rgba(0, 0, 0, .25);
+
+      legend {
+        color: rgba(0, 0, 0, .7);
+      }
+    }
+
+    .input-field {
+      padding-right: 10px;
+
+      mat-form-field {
+        margin-bottom: 5px;
+      }
+    }
+
+    mat-checkbox,
+    mat-slide-toggle {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 16px;
+      .label-wrapper {
+        white-space: normal;
+      }
+    }
+
+    mat-slide-toggle {
+      height: auto;
+    }
+
+    .date-time-input {
+      mat-form-field {
+        width: 100%;
+        margin: 2px 0;
+      }
+    }
+
+    .vertical-alignment {
+      flex-direction: column;
+    }
+  }
+}
+
+:host ::ng-deep {
+  .tb-multiple-input {
+    .mat-slide-toggle-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .mat-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+}

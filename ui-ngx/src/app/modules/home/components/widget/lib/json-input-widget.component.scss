@@ -1,0 +1,19 @@
+.tb-json-input {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+
+  &__form {
+    overflow: auto;
+    height: 100%;
+  }
+
+  &__error {
+    font-size: 18px;
+    color: #a0a0a0;
+  }
+}
+
+.tb-toast {
+  font-size: 14px!important;
+}

@@ -1,0 +1,28 @@
+<mat-form-field [formGroup]="relationTypeFormGroup" class="mat-block">
+  <input matInput type="text" placeholder="{{ required  ? ('relation.relation-type' | translate) : ( !modelValue ? ('relation.any-relation-type' | translate) : ' ') }}"
+         #relationTypeInput
+         formControlName="relationType"
+         (focusin)="onFocus()"
+         [required]="required"
+         [matAutocomplete]="relationTypeAutocomplete">
+  <button *ngIf="relationTypeFormGroup.get('relationType').value && !disabled"
+          type="button"
+          matSuffix mat-icon-button aria-label="Clear"
+          (click)="clear()">
+    <mat-icon class="material-icons">close</mat-icon>
+  </button>
+  <mat-autocomplete
+    class="tb-autocomplete"
+    #relationTypeAutocomplete="matAutocomplete"
+    [displayWith]="displayRelationTypeFn">
+    <mat-option *ngFor="let relationType of filteredRelationTypes | async" [value]="relationType">
+      <span [innerHTML]="relationType | highlight:searchText"></span>
+    </mat-option>
+  </mat-autocomplete>
+  <mat-error *ngIf="relationTypeFormGroup.get('relationType').hasError('required')">
+    {{ 'relation.relation-type-required' | translate }}
+  </mat-error>
+  <mat-error *ngIf="relationTypeFormGroup.get('relationType').hasError('maxlength')">
+    {{ 'relation.relation-type-max-length' | translate }}
+  </mat-error>
+</mat-form-field>

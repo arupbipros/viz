@@ -1,0 +1,24 @@
+<div fxLayout="column">
+  <div class="tb-device-profile-alarms">
+    <div *ngFor="let alarmControl of alarmsFormArray().controls; trackBy: trackByAlarm;
+                 let $index = index; last as isLast;"
+         fxLayout="column" [ngStyle]="!isLast ? {paddingBottom: '8px'} : {}">
+      <tb-device-profile-alarm [formControl]="alarmControl"
+                               [expanded]="$index === 0"
+                               [deviceProfileId]="deviceProfileId"
+                               (removeAlarm)="removeAlarm($index)">
+      </tb-device-profile-alarm>
+    </div>
+  </div>
+  <div *ngIf="!alarmsFormArray().controls.length">
+      <span translate fxLayoutAlign="center center"
+            class="tb-prompt">device-profile.no-alarm-rules</span>
+  </div>
+  <div *ngIf="!disabled" style="padding-top: 16px;">
+    <button mat-raised-button color="primary"
+            type="button"
+            (click)="addAlarm()">
+      <span translate>device-profile.add-alarm-rule</span>
+    </button>
+  </div>
+</div>

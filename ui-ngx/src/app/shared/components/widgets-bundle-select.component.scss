@@ -1,0 +1,97 @@
+@import '../../../scss/constants';
+
+tb-widgets-bundle-select {
+  mat-select {
+    margin: 0;
+  }
+
+  .tb-bundle-item {
+    height: 26px;
+    line-height: 26px;
+  }
+}
+
+.tb-widgets-bundle-select {
+  .tb-bundle-item {
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+tb-widgets-bundle-select,
+.tb-widgets-bundle-select {
+  .mat-select-value-text {
+    display: block;
+    width: 100%;
+  }
+
+  .tb-bundle-item {
+    display: inline-block;
+    width: 100%;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .tb-bundle-system {
+      float: right;
+      font-size: .8rem;
+      opacity: .8;
+    }
+  }
+
+  mat-option {
+    height: auto !important;
+    white-space: normal !important;
+  }
+}
+
+mat-toolbar {
+  tb-widgets-bundle-select {
+    .mat-form-field-wrapper {
+      padding-bottom: 0 !important;
+      .mat-form-field-infix {
+        background: rgba(255, 255, 255, .2);
+        padding: 5px 20px !important;
+        border: none;
+
+        mat-select {
+          .mat-select-value-text {
+            font-size: 1.2rem;
+            color: #fff;
+
+            span:first-child::after {
+              color: #fff;
+            }
+          }
+
+          .mat-select-value {
+            vertical-align: middle;
+            min-height: 30px;
+            height: 30px;
+            padding: 2px 2px 1px;
+            .mat-select-placeholder {
+              color: #fff;
+              opacity: .8;
+              line-height: 26px;
+            }
+          }
+        }
+
+        .mat-select.mat-select-invalid {
+          .mat-select-arrow {
+            color: #fff !important;
+          }
+        }
+
+        @media #{$mat-xs} {
+          width: auto;
+        }
+      }
+      .mat-form-field-underline {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<mat-form-field appearance="standard" [formGroup]="entityListFormGroup" class="mat-block">
+  <mat-chip-list #chipList formControlName="entities">
+    <mat-chip
+      *ngFor="let entity of entities"
+      [selectable]="!disabled"
+      [removable]="!disabled"
+      (removed)="remove(entity)">
+      {{entity.name}}
+      <mat-icon matChipRemove *ngIf="!disabled">close</mat-icon>
+    </mat-chip>
+    <input matInput type="text" placeholder="{{ !disabled ? ('entity.entity-list' | translate) : '' }}"
+           style="max-width: 200px;"
+           #entityInput
+           (focusin)="onFocus()"
+           formControlName="entity"
+           matAutocompleteOrigin
+           #origin="matAutocompleteOrigin"
+           [matAutocompleteConnectedTo]="origin"
+           [matAutocomplete]="entityAutocomplete"
+           [matChipInputFor]="chipList">
+  </mat-chip-list>
+  <mat-autocomplete #entityAutocomplete="matAutocomplete"
+                    class="tb-autocomplete"
+                    [displayWith]="displayEntityFn">
+    <mat-option *ngFor="let entity of filteredEntities | async" [value]="entity">
+      <span [innerHTML]="entity.name | highlight:searchText"></span>
+    </mat-option>
+    <mat-option *ngIf="!(filteredEntities | async)?.length" [value]="null">
+      <span>
+          {{ translate.get('entity.no-entities-matching', {entity: searchText}) | async }}
+      </span>
+    </mat-option>
+  </mat-autocomplete>
+  <mat-error *ngIf="entityListFormGroup.get('entities').hasError('required')">
+    {{ 'entity.entity-list-empty' | translate }}
+  </mat-error>
+</mat-form-field>

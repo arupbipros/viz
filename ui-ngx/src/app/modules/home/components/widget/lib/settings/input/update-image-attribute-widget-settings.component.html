@@ -1,0 +1,29 @@
+<section class="tb-widget-settings" [formGroup]="updateImageAttributeWidgetSettingsForm">
+  <fieldset class="fields-group">
+    <legend class="group-title" translate>widgets.input-widgets.general-settings</legend>
+    <mat-form-field fxFlex class="mat-block">
+      <mat-label translate>widgets.input-widgets.widget-title</mat-label>
+      <input matInput formControlName="widgetTitle">
+    </mat-form-field>
+    <mat-slide-toggle formControlName="showResultMessage" class="slide-block">
+      {{ 'widgets.input-widgets.show-result-message' | translate }}
+    </mat-slide-toggle>
+  </fieldset>
+  <fieldset class="fields-group">
+    <legend class="group-title" translate>widgets.input-widgets.image-input-settings</legend>
+    <section fxLayout="column">
+      <mat-slide-toggle formControlName="displayPreview" class="slide-block">
+        {{ 'widgets.input-widgets.display-preview' | translate }}
+      </mat-slide-toggle>
+      <mat-slide-toggle formControlName="displayClearButton" class="slide-block">
+        {{ 'widgets.input-widgets.display-clear-button' | translate }}
+      </mat-slide-toggle>
+      <mat-slide-toggle formControlName="displayApplyButton" class="slide-block">
+        {{ 'widgets.input-widgets.display-apply-button' | translate }}
+      </mat-slide-toggle>
+      <mat-slide-toggle formControlName="displayDiscardButton" class="slide-block">
+        {{ 'widgets.input-widgets.display-discard-button' | translate }}
+      </mat-slide-toggle>
+    </section>
+  </fieldset>
+</section>

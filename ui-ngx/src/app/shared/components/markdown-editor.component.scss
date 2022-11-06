@@ -1,0 +1,62 @@
+.markdown-content {
+  min-width: 400px;
+  &.tb-edit-mode {
+    .tb-markdown-view-container {
+      border: 1px solid #c0c0c0;
+    }
+    .tb-markdown-view {
+      padding: 20px;
+    }
+    &:not(.tb-fullscreen) {
+      padding-bottom: 15px;
+      .markdown-content-editor {
+        min-height: 200px;
+        max-height: 200px;
+        height: 200px;
+      }
+      .tb-markdown-view-container {
+        min-height: 200px;
+        max-height: 200px;
+        height: 200px;
+      }
+    }
+  }
+  &.tb-fullscreen {
+    background: #fff;
+    .markdown-content-editor {
+      height: calc(100% - 40px);
+    }
+  }
+  .markdown-content-editor {
+    position: relative;
+    height: 100%;
+  }
+  .tb-markdown-editor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #c0c0c0;
+  }
+  .tb-markdown-view-container {
+    overflow: auto;
+    height: 100%;
+  }
+  .buttons-panel {
+    position: absolute;
+    top: 5px;
+    right: 24px;
+    z-index: 1;
+    button.edit-toggle {
+      min-width: 32px;
+      min-height: 15px;
+      padding: 4px;
+      margin: 0;
+      font-size: .8rem;
+      line-height: 15px;
+      color: #7b7b7b;
+      background: rgba(220, 220, 220, .35);
+    }
+  }
+}

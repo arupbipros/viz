@@ -1,0 +1,14 @@
+:host {
+  .predicate-list {
+    overflow: auto;
+    max-height: 350px;
+    .no-data-found {
+      height: 50px;
+    }
+  }
+  .filters-operation {
+    margin-top: -40px;
+    color: #666;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,29 @@
+<mat-form-field [formGroup]="selectEntityFormGroup" class="mat-block">
+  <input matInput type="text" placeholder="{{ entityText | translate }}"
+         #entityInput
+         formControlName="entity"
+         (focusin)="onFocus()"
+         [required]="required"
+         [matAutocomplete]="entityAutocomplete">
+  <button *ngIf="selectEntityFormGroup.get('entity').value && !disabled"
+          type="button"
+          matSuffix mat-button mat-icon-button aria-label="Clear"
+          (click)="clear()">
+    <mat-icon class="material-icons">close</mat-icon>
+  </button>
+  <mat-autocomplete class="tb-autocomplete"
+                    #entityAutocomplete="matAutocomplete"
+                    [displayWith]="displayEntityFn">
+    <mat-option *ngFor="let entity of filteredEntities | async" [value]="entity">
+      <span [innerHTML]="entity.name | highlight:searchText"></span>
+    </mat-option>
+    <mat-option *ngIf="!(filteredEntities | async)?.length" [value]="null">
+      <span>
+          {{ translate.get(noEntitiesMatchingText, {entity: searchText}) | async }}
+      </span>
+    </mat-option>
+  </mat-autocomplete>
+  <mat-error *ngIf="selectEntityFormGroup.get('entity').hasError('required')">
+    {{ entityRequiredText | translate }}
+  </mat-error>
+</mat-form-field>

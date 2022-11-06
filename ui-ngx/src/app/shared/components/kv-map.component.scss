@@ -1,0 +1,25 @@
+:host {
+  .tb-kv-map {
+    span.no-data-found {
+      position: relative;
+      display: flex;
+      height: 40px;
+
+      &.disabled {
+        color: rgba(0, 0, 0, .38);
+      }
+    }
+  }
+}
+
+:host ::ng-deep {
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-form-field-infix {
+    border-top: 0;
+  }
+  .mat-form-field-underline {
+    bottom: 0;
+  }
+}

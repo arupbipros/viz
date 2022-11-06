@@ -1,0 +1,23 @@
+<section class="tb-widget-settings" [formGroup]="rpcButtonStyleFormGroup" fxLayout="column">
+  <fieldset class="fields-group">
+    <legend class="group-title" translate>widgets.rpc.button-style</legend>
+    <mat-slide-toggle formControlName="isRaised" class="slide-block">
+      {{ 'widgets.rpc.button-raised' | translate }}
+    </mat-slide-toggle>
+    <mat-slide-toggle formControlName="isPrimary" class="slide-block">
+      {{ 'widgets.rpc.button-primary' | translate }}
+    </mat-slide-toggle>
+    <section fxLayout="row wrap" fxLayoutGap="8px">
+      <tb-color-input fxFlex
+                      formControlName="textColor"
+                      icon="format_color_fill"
+                      label="{{ 'widgets.rpc.button-text-color' | translate }}" openOnInput colorClearButton>
+      </tb-color-input>
+      <tb-color-input fxFlex
+                      formControlName="bgColor"
+                      icon="format_color_fill"
+                      label="{{ 'widgets.rpc.button-background-color' | translate }}" openOnInput colorClearButton>
+      </tb-color-input>
+    </section>
+  </fieldset>
+</section>

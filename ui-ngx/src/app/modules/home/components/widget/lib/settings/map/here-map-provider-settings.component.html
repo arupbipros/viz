@@ -1,0 +1,23 @@
+<section class="tb-widget-settings" [formGroup]="providerSettingsFormGroup">
+  <mat-form-field fxFlex class="mat-block">
+    <mat-label translate>widgets.maps.map-layer</mat-label>
+    <mat-select required formControlName="mapProviderHere">
+      <mat-option *ngFor="let provider of hereMapProviders" [value]="provider">
+        {{hereMapProviderTranslations.get(provider) | translate}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <section class="tb-widget-settings" formGroupName="credentials">
+    <fieldset class="fields-group">
+      <legend class="group-title" translate>widgets.maps.credentials</legend>
+      <mat-form-field fxFlex class="mat-block">
+        <mat-label translate>widgets.maps.here-app-id</mat-label>
+        <input required matInput formControlName="app_id">
+      </mat-form-field>
+      <mat-form-field fxFlex class="mat-block">
+        <mat-label translate>widgets.maps.here-app-code</mat-label>
+        <input required matInput formControlName="app_code">
+      </mat-form-field>
+    </fieldset>
+  </section>
+</section>

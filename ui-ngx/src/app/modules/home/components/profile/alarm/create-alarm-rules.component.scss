@@ -1,0 +1,21 @@
+:host {
+  .create-alarm-rule {
+    border: 2px groove rgba(0, 0, 0, .45);
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 0;
+  }
+}
+
+:host ::ng-deep {
+  .mat-form-field.severity {
+    .mat-form-field-infix {
+      width: 160px;
+    }
+  }
+  .button-icon{
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}

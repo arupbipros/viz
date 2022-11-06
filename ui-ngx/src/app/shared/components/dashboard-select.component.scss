@@ -1,0 +1,26 @@
+:host {
+  width: min-content; //for Safari
+  min-width: 52px;
+
+  mat-select {
+    max-width: 300px;
+    pointer-events: all;
+  }
+
+  .tb-dashboard-select {
+    min-height: 32px;
+
+    span {
+      pointer-events: all;
+      cursor: pointer;
+    }
+  }
+}
+
+:host ::ng-deep {
+  mat-select {
+    .mat-select-value {
+      max-width: 282px;
+    }
+  }
+}

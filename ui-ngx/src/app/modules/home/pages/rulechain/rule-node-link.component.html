@@ -1,0 +1,11 @@
+<div class="mat-padding" fxLayout="column">
+  <form [formGroup]="ruleNodeLinkFormGroup">
+    <tb-link-labels
+      required
+      formControlName="labels"
+      [allowedLabels]="allowedLabels"
+      [allowCustom]="allowCustom"
+      [sourceRuleChainId]="sourceRuleChainId"
+    ></tb-link-labels>
+  </form>
+</div>

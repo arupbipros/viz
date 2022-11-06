@@ -1,0 +1,18 @@
+<div fxLayout="column" class="mat-content mat-padding">
+  <mat-form-field *ngIf="settings.showTemplate" class="mat-block">
+    <input readonly [ngModel]="model.chosenLabel" matInput type="text">
+  </mat-form-field>
+  <ngx-daterangepicker-material [startDate]="model.startDate"
+                                [endDate]="model.endDate"
+                                [locale]="locale"
+                                [singleDatePicker]="settings.onePanel"
+                                [autoApply]="true" (choosedDate)="choosedDate($event)">
+  </ngx-daterangepicker-material>
+  <div class="tb-panel-actions" fxLayout="row" *ngIf="!settings.autoConfirm">
+    <span fxFlex></span>
+    <button mat-button mat-raised-button color="primary"
+            type="button" (click)="apply()">
+      {{ 'action.ok' | translate }}
+    </button>
+  </div>
+</div>

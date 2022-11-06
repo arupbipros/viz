@@ -1,0 +1,15 @@
+.mat-option.branch-option {
+  .mat-icon, .check-placeholder {
+    margin-right: 8px;
+  }
+  .check-placeholder {
+    width: 18px;
+    display: inline-block;
+  }
+  .mat-option-text {
+    width: 100%;
+    .default-branch {
+      float: right;
+    }
+  }
+}

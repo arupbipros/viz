@@ -1,0 +1,6 @@
+<tb-repository-settings #repositorySettingsComponent
+                        *ngIf="!(hasRepository$ | async); else autoCommitSettings">
+</tb-repository-settings>
+<ng-template #autoCommitSettings>
+  <tb-auto-commit-settings #autoCommitSettingsComponent></tb-auto-commit-settings>
+</ng-template>

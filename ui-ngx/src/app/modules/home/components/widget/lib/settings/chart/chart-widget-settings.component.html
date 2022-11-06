@@ -1,0 +1,8 @@
+<section class="tb-widget-settings" [formGroup]="chartWidgetSettingsForm" fxLayout="column">
+  <fieldset class="fields-group">
+    <legend class="group-title" translate>widgets.chart.common-settings</legend>
+    <mat-slide-toggle formControlName="showTooltip" class="slide-block">
+      {{ 'widgets.chart.show-tooltip' | translate }}
+    </mat-slide-toggle>
+  </fieldset>
+</section>

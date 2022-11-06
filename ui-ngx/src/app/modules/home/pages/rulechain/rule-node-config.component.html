@@ -1,0 +1,11 @@
+<div [formGroup]="ruleNodeConfigFormGroup">
+  <ng-container #definedConfigContent></ng-container>
+  <div class="tb-rulenode-directive-error" *ngIf="definedDirectiveError">{{definedDirectiveError}}</div>
+  <tb-json-object-edit *ngIf="!useDefinedDirective()" #jsonObjectEditComponent
+                       class="tb-rule-node-configuration-json"
+                       formControlName="configuration"
+                       [label]="'rulenode.configuration' | translate"
+                       [required]="required"
+                       [fillHeight]="true">
+  </tb-json-object-edit>
+</div>

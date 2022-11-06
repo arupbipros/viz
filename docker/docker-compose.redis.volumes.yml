@@ -1,0 +1,11 @@
+version: '2.2'
+
+services:
+  redis:
+    volumes:
+      - redis-data:/bitnami/redis/data
+
+volumes:
+  redis-data:
+    external: true
+    name: ${REDIS_DATA_VOLUME}

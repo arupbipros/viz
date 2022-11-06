@@ -1,0 +1,7 @@
+:host ::ng-deep {
+  .mat-form-field {
+    .mat-form-field-infix {
+      border-top: none;
+    }
+  }
+}

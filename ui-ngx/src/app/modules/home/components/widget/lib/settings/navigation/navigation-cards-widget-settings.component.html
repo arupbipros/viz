@@ -1,0 +1,39 @@
+<section class="tb-widget-settings" [formGroup]="navigationCardsWidgetSettingsForm" fxLayout="column">
+  <section style="margin-bottom: 16px;">
+    <div class="mat-caption" style="margin: -8px 0 8px;" translate>widgets.navigation.filter-type</div>
+    <mat-radio-group formControlName="filterType" fxLayoutGap="16px">
+      <mat-radio-button [value]="'all'">{{ 'widgets.navigation.filter-type-all' | translate }}</mat-radio-button>
+      <mat-radio-button [value]="'include'">{{ 'widgets.navigation.filter-type-include' | translate }}</mat-radio-button>
+      <mat-radio-button [value]="'exclude'">{{ 'widgets.navigation.filter-type-exclude' | translate }}</mat-radio-button>
+    </mat-radio-group>
+  </section>
+  <mat-form-field [fxShow]="navigationCardsWidgetSettingsForm.get('filterType').value !== 'all'" fxFlex class="mat-block" floatLabel="always">
+    <mat-label translate>widgets.navigation.items</mat-label>
+    <mat-chip-list #filterItemsChipList>
+      <mat-chip *ngFor="let filterItem of navigationCardsWidgetSettingsForm.get('filter').value"
+                [removable]="true" (removed)="onFilterItemRemoved(filterItem)">
+        {{ filterItem }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input matInput type="text" placeholder="{{ 'widgets.navigation.enter-urls-to-filter' | translate }}"
+             style="max-width: 200px;"
+             #filterItemInput
+             (focusin)="onFilterItemInputFocus()"
+             matAutocompleteOrigin
+             #origin="matAutocompleteOrigin"
+             (input)="filterItemInputChange.next(filterItemInput.value)"
+             [matAutocompleteConnectedTo]="origin"
+             [matAutocomplete]="filterItemAutocomplete"
+             [matChipInputFor]="filterItemsChipList"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             (matChipInputTokenEnd)="addFilterItemFromChipInput($event)">
+    </mat-chip-list>
+    <mat-autocomplete #filterItemAutocomplete="matAutocomplete"
+                      class="tb-autocomplete"
+                      (optionSelected)="filterItemSelected($event)">
+      <mat-option *ngFor="let filterItem of filteredFilterItems | async" [value]="filterItem">
+        <span [innerHTML]="filterItem | highlight:filterItemSearchText"></span>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</section>

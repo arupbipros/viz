@@ -1,0 +1,31 @@
+@import '../../../../../scss/constants';
+
+:host {
+  .tb-datakey-config {
+    height: 100%;
+
+    .settings{
+      &> :first-child{
+        padding-top: 12px;
+      }
+      &> :nth-child(n){
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+    }
+  }
+}
+
+:host ::ng-deep {
+  .tb-datakey-config {
+    .mat-tab-body.mat-tab-body-active {
+      .mat-tab-body-content > div {
+        height: calc(65vh - 50px);
+        overflow: initial;
+        @media #{$mat-xs} {
+          height: 500px;
+        }
+      }
+    }
+  }
+}

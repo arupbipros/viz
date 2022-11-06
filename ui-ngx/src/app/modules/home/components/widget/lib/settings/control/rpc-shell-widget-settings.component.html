@@ -1,0 +1,9 @@
+<section class="tb-widget-settings" [formGroup]="rpcShellWidgetSettingsForm" fxLayout="column">
+  <fieldset class="fields-group">
+    <legend class="group-title" translate>widgets.rpc.rpc-settings</legend>
+    <mat-form-field fxFlex class="mat-block">
+      <mat-label translate>widgets.rpc.request-timeout</mat-label>
+      <input required matInput type="number" min="0" formControlName="requestTimeout">
+    </mat-form-field>
+  </fieldset>
+</section>

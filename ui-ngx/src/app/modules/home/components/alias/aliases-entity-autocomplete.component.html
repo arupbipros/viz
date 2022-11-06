@@ -1,0 +1,26 @@
+<mat-form-field [formGroup]="selectEntityInfoFormGroup" class="mat-block">
+  <input matInput type="text" placeholder="{{ alias }}"
+         #entityInfoInput
+         formControlName="entityInfo"
+         [required]="required"
+         [matAutocomplete]="entityInfoAutocomplete">
+  <button *ngIf="selectEntityInfoFormGroup.get('entityInfo').value && !disabled"
+          type="button"
+          matSuffix mat-button mat-icon-button aria-label="Clear"
+          (click)="clear()">
+    <mat-icon class="material-icons">close</mat-icon>
+  </button>
+  <mat-autocomplete
+    class="tb-autocomplete"
+    #entityInfoAutocomplete="matAutocomplete"
+    [displayWith]="displayEntityInfoFn">
+    <mat-option *ngFor="let entityInfo of filteredEntityInfos | async" [value]="entityInfo">
+      <span [innerHTML]="entityInfo.name | highlight:searchText"></span>
+    </mat-option>
+    <mat-option *ngIf="!(filteredEntityInfos | async)?.length" [value]="null">
+      <span>
+          {{ translate.get('entity.no-entities-matching', {entity: searchText}) | async }}
+      </span>
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

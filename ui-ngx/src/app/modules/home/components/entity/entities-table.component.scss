@@ -1,0 +1,60 @@
+@import '../../../../../scss/constants';
+
+:host {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  mat-drawer-container {
+    overflow: clip;
+  }
+
+  .tb-entity-table {
+    .tb-entity-table-content {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+
+      .mat-toolbar-tools{
+        min-height: auto;
+      }
+
+      .title-container{
+        overflow: hidden;
+      }
+
+      .tb-entity-table-title {
+        padding-right: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .table-container {
+        overflow: auto;
+      }
+
+      .tb-entity-table-info{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  @media #{$mat-xs} {
+    .mat-toolbar {
+      height: auto;
+      min-height: 100px;
+
+      .tb-entity-table-title{
+        padding-bottom: 5px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+:host ::ng-deep .mat-sort-header-sorted .mat-sort-header-arrow {
+  opacity: 1 !important;
+}

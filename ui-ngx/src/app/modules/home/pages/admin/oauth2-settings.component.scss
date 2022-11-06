@@ -1,0 +1,56 @@
+:host{
+  .checkbox-row {
+    margin-top: 1em;
+  }
+
+  .registration-card{
+    margin-bottom: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    .custom-settings{
+      font-size: 16px;
+      .mat-expansion-panel-header{
+        padding: 0 2px;
+      }
+    }
+  }
+
+  .container{
+    margin-bottom: 1em;
+
+    .tb-highlight{
+      margin: 0;
+    }
+
+    .tb-hint{
+      padding-bottom: 0;
+    }
+  }
+
+  .mat-expansion-panel {
+    .mat-expansion-panel-header {
+      &.mat-expanded {
+        height: 48px;
+      }
+    }
+  }
+}
+
+:host ::ng-deep{
+  .registration-card{
+    .custom-settings{
+      .mat-expansion-panel-body{
+        padding: 0 2px 1em;
+      }
+      .mat-form-field-suffix .mat-icon-button .mat-icon{
+        font-size: 18px;
+      }
+    }
+  }
+  .domains-list, .apps-list {
+    margin-bottom: 1.5em;
+    .mat-form-field-suffix .mat-icon-button .mat-icon{
+      font-size: 24px;
+    }
+  }
+}

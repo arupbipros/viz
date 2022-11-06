@@ -1,0 +1,38 @@
+:host {
+  overflow: hidden;
+
+  .entity-state-controller {
+    .state-divider {
+      padding: 0 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .state-entry {
+      pointer-events: all;
+      overflow: hidden;
+      font-size: 18px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      outline: none;
+    }
+
+    mat-select {
+      margin: 0;
+    }
+  }
+}
+
+:host ::ng-deep {
+  mat-select {
+    .mat-select-value {
+      max-width: 200px;
+      .mat-select-value-text {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+}

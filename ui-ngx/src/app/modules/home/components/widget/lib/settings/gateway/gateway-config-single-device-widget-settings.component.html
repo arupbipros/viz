@@ -1,0 +1,9 @@
+<section class="tb-widget-settings" [formGroup]="gatewayConfigSingleDeviceWidgetSettingsForm" fxLayout="column">
+  <mat-form-field fxFlex class="mat-block">
+    <mat-label translate>widgets.gateway.gateway-title</mat-label>
+    <input matInput formControlName="gatewayTitle">
+  </mat-form-field>
+  <mat-slide-toggle formControlName="readOnly" class="slide-block">
+    {{ 'widgets.gateway.read-only' | translate }}
+  </mat-slide-toggle>
+</section>

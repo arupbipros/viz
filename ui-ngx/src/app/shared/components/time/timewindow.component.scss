@@ -1,0 +1,20 @@
+:host {
+  min-width: 52px;
+  margin: 8px 0;
+  section.tb-timewindow {
+    min-height: 32px;
+    padding: 0 6px;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      pointer-events: all;
+      cursor: pointer;
+    }
+
+    .timezone-abbr {
+      font-weight: 500;
+    }
+  }
+}

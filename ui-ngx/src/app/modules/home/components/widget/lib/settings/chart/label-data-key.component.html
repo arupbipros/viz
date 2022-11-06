@@ -1,0 +1,46 @@
+<mat-expansion-panel class="label-data-key" fxFlex [formGroup]="labelDataKeyFormGroup" [(expanded)]="expanded">
+  <mat-expansion-panel-header>
+    <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+      <mat-panel-title>
+        <div fxLayout="row" fxFlex fxLayoutAlign="start center">
+          {{ labelDataKeyText() }}
+        </div>
+      </mat-panel-title>
+      <span fxFlex></span>
+      <button *ngIf="!disabled" mat-icon-button style="min-width: 40px;"
+              type="button"
+              (click)="removeLabelDataKey.emit()"
+              matTooltip="{{ 'action.remove' | translate }}"
+              matTooltipPosition="above">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-expansion-panel-header>
+  <ng-template matExpansionPanelContent>
+    <div fxLayout="column" fxLayoutGap="0.5em">
+      <mat-divider></mat-divider>
+      <section class="tb-widget-settings" fxLayout="column">
+        <section fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="8px">
+          <mat-form-field fxFlex class="mat-block">
+            <mat-label translate>widgets.chart.key-name</mat-label>
+            <input required matInput formControlName="name">
+            <mat-error *ngIf="labelDataKeyFormGroup.get('name').hasError('required')">
+              {{ 'widgets.chart.key-name-required' | translate }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field fxFlex class="mat-block">
+            <mat-label translate>widgets.chart.key-type</mat-label>
+            <mat-select formControlName="type">
+              <mat-option [value]="'attribute'">
+                {{ 'widgets.chart.key-type-attribute' | translate }}
+              </mat-option>
+              <mat-option [value]="'timeseries'">
+                {{ 'widgets.chart.key-type-timeseries' | translate }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </section>
+      </section>
+    </div>
+  </ng-template>
+</mat-expansion-panel>

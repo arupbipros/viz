@@ -1,0 +1,33 @@
+<section [formGroup]="instancesListFormGroup" class="lwm2m-instances-list">
+  <mat-form-field class="mat-block">
+    <mat-label>{{ 'device-profile.lwm2m.instances-list' | translate }}</mat-label>
+    <mat-chip-list #chipList formControlName="instanceList" [required]="required" (focus)="onFocus()">
+      <mat-chip
+        *ngFor="let instanceId of instancesId"
+        [selectable]="!disabled"
+        [removable]="!disabled"
+        (removed)="remove(instanceId)">
+        {{instanceId}}
+        <mat-icon matChipRemove *ngIf="!disabled">close</mat-icon>
+      </mat-chip>
+      <input matInput type="text"
+             #instanceId
+             style="max-width: 70px;"
+             formControlName="instanceId"
+             [matChipInputFor]="chipList"
+             [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+             matChipInputAddOnBlur
+             (matChipInputTokenEnd)="add($event)">
+    </mat-chip-list>
+    <mat-error *ngIf="instancesListFormGroup.get('instanceList').hasError('required')">
+      {{ 'device-profile.lwm2m.instances-list-required' | translate }}
+    </mat-error>
+    <mat-error *ngIf="instancesListFormGroup.get('instanceId').hasError('pattern')">
+      {{ 'device-profile.lwm2m.instance-id-pattern' | translate }}
+    </mat-error>
+    <mat-error *ngIf="instancesListFormGroup.get('instanceId').hasError('max')">
+      {{ 'device-profile.lwm2m.instance-id-max' | translate: {max: instanceIdValueMax} }}
+    </mat-error>
+  </mat-form-field>
+</section>
+

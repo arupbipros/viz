@@ -1,0 +1,23 @@
+@import "../../../../../scss/constants";
+
+:host {
+  min-width: 52px;
+
+  section.tb-aliases-entity-select {
+    min-height: 32px;
+    padding: 0 6px;
+
+    @media #{$mat-lt-md} {
+      padding: 0;
+    }
+
+    span {
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      pointer-events: all;
+      cursor: pointer;
+    }
+  }
+}

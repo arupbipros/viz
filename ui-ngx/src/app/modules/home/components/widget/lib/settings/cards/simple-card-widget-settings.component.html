@@ -1,0 +1,13 @@
+<section [formGroup]="simpleCardWidgetSettingsForm" fxLayout="column">
+  <mat-form-field fxFlex class="mat-block">
+    <mat-label translate>widgets.simple-card.label-position</mat-label>
+    <mat-select formControlName="labelPosition">
+      <mat-option [value]="'left'">
+        {{ 'widgets.simple-card.label-position-left' | translate }}
+      </mat-option>
+      <mat-option [value]="'top'">
+        {{ 'widgets.simple-card.label-position-top' | translate }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>

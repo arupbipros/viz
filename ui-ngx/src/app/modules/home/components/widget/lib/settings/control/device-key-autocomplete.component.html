@@ -1,0 +1,24 @@
+<mat-form-field fxFlex class="mat-block" [formGroup]="deviceKeyFormGroup">
+  <mat-label>{{ (keyType === dataKeyType.attribute
+    ? attributeLabel
+    : timeseriesLabel) | translate }}</mat-label>
+  <input [required]="required" matInput
+         type="text" placeholder="{{ 'entity.key-name' | translate }}"
+         #keyInput
+         (focusin)="onFocus()"
+         formControlName="key"
+         [matAutocomplete]="keyAutocomplete">
+  <button *ngIf="deviceKeyFormGroup.get('key').value && !deviceKeyFormGroup.get('key').disabled"
+          type="button"
+          matSuffix mat-icon-button aria-label="Clear"
+          (click)="clearKey()">
+    <mat-icon class="material-icons">close</mat-icon>
+  </button>
+  <mat-autocomplete
+    class="tb-autocomplete"
+    #keyAutocomplete="matAutocomplete">
+    <mat-option *ngFor="let key of filteredKeys | async" [value]="key">
+      <span [innerHTML]="key | highlight:keySearchText"></span>
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

@@ -1,0 +1,13 @@
+:host ::ng-deep {
+  mat-radio-button {
+    display: block;
+    margin-bottom: 16px;
+    .mat-radio-label {
+      width: 100%;
+      align-items: start;
+      .mat-radio-label-content {
+        width: 100%;
+      }
+    }
+  }
+}

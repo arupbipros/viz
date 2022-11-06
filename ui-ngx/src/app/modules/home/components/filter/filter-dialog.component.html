@@ -1,0 +1,53 @@
+<form [formGroup]="filterFormGroup" (ngSubmit)="save()" style="width: 700px;">
+  <mat-toolbar color="primary">
+    <h2>{{ (isAdd ? 'filter.add' : 'filter.edit') | translate }}</h2>
+    <span fxFlex></span>
+    <button mat-icon-button
+            (click)="cancel()"
+            type="button">
+      <mat-icon class="material-icons">close</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-progress-bar color="warn" mode="indeterminate" *ngIf="isLoading$ | async">
+  </mat-progress-bar>
+  <div mat-dialog-content>
+    <fieldset [disabled]="isLoading$ | async">
+      <div fxFlex fxLayout="column">
+        <div fxLayout="row">
+          <mat-form-field fxFlex class="mat-block">
+            <mat-label translate>filter.name</mat-label>
+            <input matInput formControlName="filter" required>
+            <mat-error *ngIf="filterFormGroup.get('filter').hasError('required')">
+              {{ 'filter.name-required' | translate }}
+            </mat-error>
+            <mat-error *ngIf="filterFormGroup.get('filter').hasError('duplicateFilterName')">
+              {{ 'filter.duplicate-filter' | translate }}
+            </mat-error>
+          </mat-form-field>
+          <section class="tb-editable-switch" fxLayout="column" fxLayoutAlign="start center">
+            <label class="tb-small editable-label" translate>filter.editable</label>
+            <mat-slide-toggle class="editable-switch"
+                              formControlName="editable">
+            </mat-slide-toggle>
+          </section>
+        </div>
+        <tb-key-filter-list
+          formControlName="keyFilters">
+        </tb-key-filter-list>
+      </div>
+    </fieldset>
+  </div>
+  <div mat-dialog-actions fxLayoutAlign="end center">
+    <button mat-button color="primary"
+            type="button"
+            [disabled]="(isLoading$ | async)"
+            (click)="cancel()" cdkFocusInitial>
+      {{ 'action.cancel' | translate }}
+    </button>
+    <button mat-raised-button color="primary"
+            type="submit"
+            [disabled]="(isLoading$ | async) || filterFormGroup.invalid || !filterFormGroup.dirty">
+      {{ (isAdd ? 'action.add' : 'action.update') | translate }}
+    </button>
+  </div>
+</form>

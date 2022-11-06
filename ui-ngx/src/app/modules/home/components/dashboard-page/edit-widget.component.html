@@ -1,0 +1,11 @@
+<form [formGroup]="widgetFormGroup">
+  <fieldset [disabled]="isLoading$ | async">
+    <tb-widget-config
+      [aliasController]="aliasController"
+      [functionsOnly]="widgetEditMode"
+      [dashboard]="dashboard"
+      [widget]="widget"
+      formControlName="widgetConfig">
+    </tb-widget-config>
+  </fieldset>
+</form>

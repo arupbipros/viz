@@ -1,0 +1,31 @@
+@keyframes tbMoveFromTopFade {
+  from {
+    opacity: 0;
+
+    transform: translate(0, -100%);
+  }
+}
+
+@keyframes tbMoveToTopFade {
+  to {
+    opacity: 0;
+
+    transform: translate(0, -100%);
+  }
+}
+
+@keyframes tbMoveFromBottomFade {
+  from {
+    opacity: 0;
+
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes tbMoveToBottomFade {
+  to {
+    opacity: 0;
+
+    transform: translate(0, 150%);
+  }
+}

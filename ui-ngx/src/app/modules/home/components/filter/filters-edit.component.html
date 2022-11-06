@@ -1,0 +1,15 @@
+<section class="tb-filters-edit" fxLayout="row" fxLayoutAlign="start center" *ngIf="hasEditableFilters">
+  <button mat-icon-button
+          cdkOverlayOrigin #filtersEditPanelOrigin="cdkOverlayOrigin"
+          (click)="openEditMode()"
+          matTooltip="{{ 'filter.filters' | translate }}"
+          [matTooltipPosition]="tooltipPosition">
+    <mat-icon>filter_list</mat-icon>
+  </button>
+  <span fxHide.lt-lg
+        (click)="openEditMode()"
+        matTooltip="{{ 'filter.filters' | translate }}"
+        [matTooltipPosition]="tooltipPosition">
+    {{ 'filter.filters' | translate }}
+  </span>
+</section>

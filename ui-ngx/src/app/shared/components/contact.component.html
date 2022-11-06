@@ -1,0 +1,53 @@
+<section [formGroup]="parentForm">
+  <mat-form-field class="mat-block">
+    <mat-label translate>contact.country</mat-label>
+    <mat-select formControlName="country">
+      <mat-option *ngFor="let country of countries" [value]="country">
+        {{ country }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div fxLayout.gt-sm="row" fxLayoutGap.gt-sm="10px">
+    <mat-form-field class="mat-block">
+      <mat-label translate>contact.city</mat-label>
+      <input matInput formControlName="city">
+      <mat-error *ngIf="parentForm.get('city').hasError('maxlength')">
+        {{ 'contact.city-max-length' | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="mat-block">
+      <mat-label translate>contact.state</mat-label>
+      <input matInput formControlName="state">
+      <mat-error *ngIf="parentForm.get('state').hasError('maxlength')">
+        {{ 'contact.state-max-length' | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="mat-block">
+      <mat-label translate>contact.postal-code</mat-label>
+      <input matInput formControlName="zip">
+      <mat-error *ngIf="parentForm.get('zip').hasError('pattern')">
+        {{ 'contact.postal-code-invalid' | translate }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <mat-form-field class="mat-block">
+    <mat-label translate>contact.address</mat-label>
+    <input matInput formControlName="address">
+  </mat-form-field>
+  <mat-form-field class="mat-block">
+    <mat-label translate>contact.address2</mat-label>
+    <input matInput formControlName="address2">
+  </mat-form-field>
+  <tb-phone-input [required]="false"
+                  [label]="'contact.phone'"
+                  [enableFlagsSelect]="true"
+                  formControlName="phone">
+  </tb-phone-input>
+  <mat-form-field class="mat-block">
+    <mat-label translate>contact.email</mat-label>
+    <input matInput formControlName="email">
+    <mat-error *ngIf="parentForm.get('email').hasError('email')">
+      {{ 'user.invalid-email-format' | translate }}
+    </mat-error>
+  </mat-form-field>
+</section>

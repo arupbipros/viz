@@ -1,0 +1,11 @@
+@import './../scss/constants';
+
+:host {
+  .dialog-container {
+    min-width: 650px !important;
+
+    @media #{$mat-lt-md} {
+      min-width: 100% !important;
+    }
+  }
+}

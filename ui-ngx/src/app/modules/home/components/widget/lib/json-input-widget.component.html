@@ -1,0 +1,42 @@
+<div class="tb-json-input" tb-toast toastTarget="{{ toastTargetId }}">
+  <form *ngIf="attributeUpdateFormGroup"
+        fxLayout="column"
+        class="tb-json-input__form"
+        [formGroup]="attributeUpdateFormGroup"
+        (ngSubmit)="save()">
+      <div fxLayout="column" fxLayoutGap="10px" fxFlex *ngIf="datasourceDetected && !errorMessage; else errorContainer">
+        <fieldset fxFlex>
+          <tb-json-object-edit
+            [editorStyle]="{minHeight: '100px'}"
+            fillHeight="true"
+            [required]="settings.attributeRequired"
+            label="{{ settings.showLabel ? labelValue : '' }}"
+            formControlName="currentValue"
+            (focusin)="isFocused = true;"
+            (focusout)="isFocused = false;"
+          ></tb-json-object-edit>
+        </fieldset>
+        <div class="tb-json-input-form__actions" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+          <button mat-button color="primary"
+                  type="button"
+                  [disabled]="!attributeUpdateFormGroup.dirty"
+                  (click)="discard()"
+                  matTooltip="{{ 'widgets.input-widgets.discard-changes' | translate }}"
+                  matTooltipPosition="above">
+            {{ "action.undo" | translate }}
+          </button>
+          <button mat-button mat-raised-button color="primary"
+                  type="submit"
+                  [disabled]="attributeUpdateFormGroup.invalid || !attributeUpdateFormGroup.dirty">
+            {{ "action.save" | translate }}
+          </button>
+        </div>
+      </div>
+
+    <ng-template #errorContainer>
+      <div class="tb-json-input__error" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+        {{ errorMessage | translate }}
+      </div>
+    </ng-template>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+:host {
+  .tb-material-icons-dialog {
+    position: relative;
+  }
+  .tb-icons-load {
+    top: 64px;
+    z-index: 3;
+    background: rgba(255, 255, 255, .75);
+  }
+}
+
+:host ::ng-deep {
+  .tb-material-icons-dialog {
+    button.mat-icon-button.tb-select-icon-button {
+      width: 56px;
+      height: 56px;
+      padding: 16px;
+      margin: 10px;
+      border: solid 1px #ffa500;
+      border-radius: 0;
+      line-height: 0;
+    }
+  }
+}

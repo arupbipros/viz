@@ -1,0 +1,15 @@
+server:
+  # Server bind address
+  address: "HTTP_BIND_ADDRESS"
+  # Server bind port
+  port: "HTTP_BIND_PORT"
+thingsboard:
+  enableProxy: "TB_ENABLE_PROXY"
+  # ThingsBoard node host
+  host: "TB_HOST"
+  # ThingsBoard node port
+  port: "TB_PORT"
+logger:
+  level: "LOGGER_LEVEL"
+  path: "LOG_FOLDER"
+  filename: "LOGGER_FILENAME"

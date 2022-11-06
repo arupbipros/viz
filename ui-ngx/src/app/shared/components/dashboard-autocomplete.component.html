@@ -1,0 +1,33 @@
+<mat-form-field [formGroup]="selectDashboardFormGroup" class="mat-block" [floatLabel]="floatLabel">
+  <input matInput type="text" placeholder="{{ placeholder || ('dashboard.dashboard' | translate) }}"
+         #dashboardInput
+         formControlName="dashboard"
+         (focusin)="onFocus()"
+         [required]="required"
+         [matAutocomplete]="dashboardAutocomplete">
+  <button *ngIf="selectDashboardFormGroup.get('dashboard').value && !disabled"
+          type="button"
+          matSuffix mat-button mat-icon-button aria-label="Clear"
+          (click)="clear()">
+    <mat-icon class="material-icons">close</mat-icon>
+  </button>
+  <mat-autocomplete
+    class="tb-autocomplete"
+    #dashboardAutocomplete="matAutocomplete"
+    [displayWith]="displayDashboardFn">
+    <mat-option *ngFor="let dashboard of filteredDashboards | async" [value]="dashboard">
+      <span [innerHTML]="dashboard.title | highlight:searchText"></span>
+    </mat-option>
+    <mat-option *ngIf="!(filteredDashboards | async)?.length" [value]="null">
+      <span>
+          {{ translate.get('dashboard.no-dashboards-matching', {entity: searchText}) | async }}
+      </span>
+    </mat-option>
+  </mat-autocomplete>
+  <mat-error>
+    <ng-content select="[tb-error]"></ng-content>
+  </mat-error>
+  <mat-hint>
+    <ng-content select="[tb-hint]"></ng-content>
+  </mat-hint>
+</mat-form-field>

@@ -1,0 +1,26 @@
+<form [formGroup]="editDetailsFormGroup">
+  <mat-toolbar color="primary">
+    <h2>{{ title | translate }}</h2>
+    <span fxFlex></span>
+    <button mat-icon-button
+            [matDialogClose]="undefined"
+            type="button">
+      <mat-icon class="material-icons">close</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div mat-dialog-content>
+    <tb-rate-limits-list formControlName="rateLimits"></tb-rate-limits-list>
+  </div>
+  <div mat-dialog-actions fxLayoutAlign="end center">
+    <button mat-button color="primary"
+            type="button"
+            [matDialogClose]="undefined"
+            cdkFocusInitial>
+      {{ 'action.cancel' | translate }}
+    </button>
+    <button *ngIf="!data.readonly" mat-raised-button color="primary" (click)="save()"
+            [disabled]="editDetailsFormGroup.invalid || !editDetailsFormGroup.dirty">
+      {{ 'action.save' | translate }}
+    </button>
+  </div>
+</form>

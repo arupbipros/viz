@@ -1,0 +1,15 @@
+:host {
+  .mat-icon-button{
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    .mat-icon.copied{
+      color: #00C851 !important;
+    }
+  }
+  &:hover{
+    .mat-icon{
+      color: #28567E !important;
+    }
+  }
+}

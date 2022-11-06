@@ -1,0 +1,24 @@
+<section class="tb-widget-settings" [formGroup]="gatewayEventsWidgetSettingsForm" fxLayout="column">
+  <mat-form-field fxFlex class="mat-block">
+    <mat-label translate>widgets.gateway.events-title</mat-label>
+    <input matInput formControlName="eventsTitle">
+  </mat-form-field>
+  <mat-form-field fxFlex class="mat-block" floatLabel="always">
+    <mat-label translate>widgets.gateway.events-filter</mat-label>
+    <mat-chip-list #chipList formControlName="eventsReg">
+      <mat-chip
+        *ngFor="let eventFilter of gatewayEventsWidgetSettingsForm.get('eventsReg').value"
+        [removable]="true"
+        (removed)="removeEventFilter(eventFilter)">
+        {{eventFilter}}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input
+        placeholder="{{ 'widgets.gateway.event-key-contains' | translate }}"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputFor]="chipList"
+        matChipInputAddOnBlur
+        (matChipInputTokenEnd)="addEventFilterFromInput($event)">
+    </mat-chip-list>
+  </mat-form-field>
+</section>

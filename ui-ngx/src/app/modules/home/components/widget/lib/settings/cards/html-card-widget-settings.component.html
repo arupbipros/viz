@@ -1,0 +1,8 @@
+<section [formGroup]="htmlCardWidgetSettingsForm" fxLayout="column">
+  <tb-html formControlName="cardHtml" required
+          label="{{ 'widgets.html-card.html' | translate }}">
+  </tb-html>
+  <tb-css formControlName="cardCss"
+          label="{{ 'widgets.html-card.css' | translate }}">
+  </tb-css>
+</section>

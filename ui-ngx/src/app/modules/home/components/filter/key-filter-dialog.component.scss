@@ -1,0 +1,11 @@
+:host ::ng-deep {
+  .entity-key {
+    mat-form-field {
+      .mat-form-field-wrapper {
+        .mat-form-field-infix {
+          width: auto;
+        }
+      }
+    }
+  }
+}

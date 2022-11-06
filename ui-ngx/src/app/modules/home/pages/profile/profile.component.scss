@@ -1,0 +1,43 @@
+@import "../../../../../scss/constants";
+
+:host {
+  mat-card.profile-card {
+    margin: 8px;
+    @media #{$mat-gt-sm} {
+      width: 60%;
+    }
+    .mat-headline {
+      margin: 0;
+    }
+    .profile-email {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .mat-subheader {
+      line-height: 24px;
+      color: rgba(0,0,0,0.54);
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .profile-last-login-ts {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .tb-home-dashboard {
+      tb-dashboard-autocomplete {
+        @media #{$mat-gt-sm} {
+          padding-right: 12px;
+        }
+
+        @media #{$mat-lt-md} {
+          padding-bottom: 12px;
+        }
+      }
+      mat-checkbox {
+        @media #{$mat-gt-sm} {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}

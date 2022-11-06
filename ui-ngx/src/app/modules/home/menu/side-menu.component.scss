@@ -1,0 +1,54 @@
+:host {
+  width: 100%;
+}
+
+:host ::ng-deep {
+
+  .tb-side-menu,
+  .tb-side-menu ul {
+    padding: 0;
+    margin-top: 0;
+    list-style: none;
+  }
+
+  .tb-side-menu > li {
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+  }
+
+  a.mat-button {
+    display: flex;
+    overflow: hidden;
+    line-height: 40px;
+    border-radius: 0;
+    &:hover {
+      border-bottom: none;
+      background-color: rgba(255,255,255,0.08);
+    }
+    &:focus {
+      border-bottom: none;
+    }
+    &.tb-active {
+      font-weight: 500;
+      background-color: rgba(255, 255, 255, .15);
+    }
+
+    .mat-button-wrapper {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      mat-icon {
+        margin-right: 8px;
+        margin-left: 0;
+      }
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.tb-toggle-icon {
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+      }
+    }
+  }
+}

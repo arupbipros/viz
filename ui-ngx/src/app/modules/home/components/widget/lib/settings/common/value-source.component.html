@@ -1,0 +1,60 @@
+<section [formGroup]="valueSourceFormGroup" fxLayout="column">
+  <mat-form-field fxFlex class="mat-block">
+    <mat-label translate>widgets.value-source.value-source</mat-label>
+    <mat-select formControlName="valueSource">
+      <mat-option [value]="'predefinedValue'">
+        {{ 'widgets.value-source.predefined-value' | translate }}
+      </mat-option>
+      <mat-option [value]="'entityAttribute'">
+        {{ 'widgets.value-source.entity-attribute' | translate }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field [fxShow]="valueSourceFormGroup.get('valueSource').value === 'predefinedValue'" fxFlex class="mat-block">
+    <mat-label translate>widgets.value-source.value</mat-label>
+    <input matInput type="number" formControlName="value">
+  </mat-form-field>
+  <section [fxShow]="valueSourceFormGroup.get('valueSource').value === 'entityAttribute'" fxLayout="column" fxLayout.gt-xs="column"
+           fxLayoutGap.gt-xs="8px" fxLayoutAlign.gt-xs="start center">
+    <mat-form-field fxFlex class="mat-block">
+      <mat-label>{{ 'widgets.value-source.source-entity-alias' | translate }}</mat-label>
+      <input matInput type="text" placeholder="{{ 'entity.entity-alias' | translate }}"
+             #entityAliasInput
+             formControlName="entityAlias"
+             [matAutocomplete]="entityAliasAutocomplete">
+      <button *ngIf="valueSourceFormGroup.get('entityAlias').value && !valueSourceFormGroup.get('entityAlias').disabled"
+              type="button"
+              matSuffix mat-icon-button aria-label="Clear"
+              (click)="clearEntityAlias()">
+        <mat-icon class="material-icons">close</mat-icon>
+      </button>
+      <mat-autocomplete
+        class="tb-autocomplete"
+        #entityAliasAutocomplete="matAutocomplete">
+        <mat-option *ngFor="let entityAlias of filteredEntityAliases | async" [value]="entityAlias">
+          <span [innerHTML]="entityAlias | highlight:aliasSearchText"></span>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field fxFlex class="mat-block">
+      <mat-label>{{ 'widgets.value-source.source-entity-attribute' | translate }}</mat-label>
+      <input matInput type="text" placeholder="{{ 'entity.key-name' | translate }}"
+             #keyInput
+             formControlName="attribute"
+             [matAutocomplete]="keyAutocomplete">
+      <button *ngIf="valueSourceFormGroup.get('attribute').value && !valueSourceFormGroup.get('attribute').disabled"
+              type="button"
+              matSuffix mat-icon-button aria-label="Clear"
+              (click)="clearKey()">
+        <mat-icon class="material-icons">close</mat-icon>
+      </button>
+      <mat-autocomplete
+        class="tb-autocomplete"
+        #keyAutocomplete="matAutocomplete">
+        <mat-option *ngFor="let key of filteredKeys | async" [value]="key">
+          <span [innerHTML]="key | highlight:keySearchText"></span>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </section>
+</section>

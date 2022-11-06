@@ -1,0 +1,15 @@
+server:
+  # Server bind address
+  address: "0.0.0.0"
+  # Server bind port
+  port: "8090"
+thingsboard:
+  enableProxy: "false"
+  # ThingsBoard node host
+  host: "localhost"
+  # ThingsBoard node port
+  port: "8080"
+logger:
+  level: "info"
+  path: "logs"
+  filename: "tb-web-ui-%DATE%.log"

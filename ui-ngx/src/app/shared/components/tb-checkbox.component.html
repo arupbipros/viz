@@ -1,0 +1,7 @@
+<mat-checkbox [(ngModel)]="innerValue"
+              (ngModelChange)="modelChange($event)"
+              [checked]="innerValue"
+              [disabled]="disabled"
+              (change)="onHostChange($event)">
+  <ng-content></ng-content>
+</mat-checkbox>
