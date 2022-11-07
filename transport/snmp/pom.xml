@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.thingsboard</groupId>
+        <groupId>com.vizzionnaire</groupId>
         <version>3.4.1</version>
         <artifactId>transport</artifactId>
     </parent>
@@ -35,7 +35,7 @@
             <artifactId>snmp</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>queue</artifactId>
         </dependency>
         <dependency>

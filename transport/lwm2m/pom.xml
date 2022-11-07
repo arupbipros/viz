@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.thingsboard</groupId>
+        <groupId>com.vizzionnaire</groupId>
         <version>3.4.1</version>
         <artifactId>transport</artifactId>
     </parent>
@@ -37,11 +37,11 @@
             <artifactId>lwm2m</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>queue</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>cache</artifactId>
         </dependency>
         <dependency>

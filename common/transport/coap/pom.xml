@@ -24,7 +24,7 @@
             <artifactId>transport-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>coap-server</artifactId>
         </dependency>
         <dependency>

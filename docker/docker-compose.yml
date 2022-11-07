@@ -37,7 +37,7 @@ services:
       - tb-node.env
     volumes:
       - ./tb-node/conf:/config
-      - ./tb-node/log:/var/log/thingsboard
+      - ./tb-node/log:/var/log/vizzionnaire
     depends_on:
       - zookeeper
       - tb-js-executor
@@ -63,7 +63,7 @@ services:
       - tb-node.env
     volumes:
       - ./tb-node/conf:/config
-      - ./tb-node/log:/var/log/thingsboard
+      - ./tb-node/log:/var/log/vizzionnaire
     depends_on:
       - zookeeper
       - tb-js-executor
@@ -87,7 +87,7 @@ services:
       - tb-node.env
     volumes:
       - ./tb-node/conf:/config
-      - ./tb-node/log:/var/log/thingsboard
+      - ./tb-node/log:/var/log/vizzionnaire
     depends_on:
       - zookeeper
       - tb-js-executor
@@ -109,7 +109,7 @@ services:
       - tb-node.env
     volumes:
       - ./tb-node/conf:/config
-      - ./tb-node/log:/var/log/thingsboard
+      - ./tb-node/log:/var/log/vizzionnaire
     depends_on:
       - zookeeper
       - tb-js-executor
@@ -281,7 +281,7 @@ services:
   haproxy:
     restart: always
     container_name: "${LOAD_BALANCER_NAME}"
-    image: thingsboard/haproxy-certbot:1.3.0
+    image: vizzionnaire/haproxy-certbot:1.3.0
     volumes:
      - ./haproxy/config:/config
      - ./haproxy/letsencrypt:/etc/letsencrypt

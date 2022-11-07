@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.thingsboard</groupId>
+        <groupId>com.vizzionnaire</groupId>
         <version>3.4.1</version>
         <artifactId>rule-engine</artifactId>
     </parent>
-    <groupId>org.thingsboard.rule-engine</groupId>
+    <groupId>com.vizzionnaire.rule-engine</groupId>
     <artifactId>rule-engine-api</artifactId>
     <packaging>jar</packaging>
 
@@ -22,22 +22,22 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>message</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>dao-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>cluster-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>util</artifactId>
             <scope>provided</scope>
         </dependency>

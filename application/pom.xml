@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.thingsboard</groupId>
+        <groupId>com.vizzionnaire</groupId>
         <version>3.4.1</version>
-        <artifactId>thingsboard</artifactId>
+        <artifactId>vizzionnaire</artifactId>
     </parent>
     <artifactId>application</artifactId>
     <packaging>jar</packaging>
@@ -21,10 +21,10 @@
         <pkg.disabled>false</pkg.disabled>
         <pkg.process-resources.phase>process-resources</pkg.process-resources.phase>
         <pkg.package.phase>package</pkg.package.phase>
-        <pkg.name>thingsboard</pkg.name>
+        <pkg.name>vizzionnaire</pkg.name>
         <pkg.win.dist>${project.build.directory}/windows</pkg.win.dist>
         <pkg.copyInstallScripts>true</pkg.copyInstallScripts>
-        <pkg.implementationTitle>ThingsBoard</pkg.implementationTitle>
+        <pkg.implementationTitle>Vizzionnaire</pkg.implementationTitle>
         <pkg.mainClass>org.thingsboard.server.ThingsboardServerApplication</pkg.mainClass>
     </properties>
 
@@ -37,27 +37,27 @@
             <classifier>linux-x86_64</classifier>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>actor</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>util</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.rule-engine</groupId>
+            <groupId>com.vizzionnaire.rule-engine</groupId>
             <artifactId>rule-engine-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>cluster-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>version-control</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.rule-engine</groupId>
+            <groupId>com.vizzionnaire.rule-engine</groupId>
             <artifactId>rule-engine-components</artifactId>
         </dependency>
         <dependency>
@@ -85,23 +85,23 @@
             <artifactId>snmp</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>dao</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>queue</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>stats</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard.common</groupId>
+            <groupId>com.vizzionnaire.common</groupId>
             <artifactId>edge-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>dao</artifactId>
             <type>test-jar</type>
             <scope>test</scope>
@@ -131,7 +131,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>ui-ngx</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
@@ -252,12 +252,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>tools</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>rest-client</artifactId>
             <scope>test</scope>
         </dependency>

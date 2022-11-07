@@ -1,4 +1,4 @@
-FROM thingsboard/openjdk11:bullseye-slim
+FROM vizzionnaire/openjdk11:bullseye-slim
 
 ENV PG_MAJOR 12
 
@@ -11,7 +11,7 @@ ENV PGDATA=/data/db
 ENV PATH=$PATH:/usr/lib/postgresql/$PG_MAJOR/bin
 
 ENV SPRING_DRIVER_CLASS_NAME=org.postgresql.Driver
-ENV SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/thingsboard
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/vizzionnaire
 ENV SPRING_DATASOURCE_USERNAME=${pkg.user}
 ENV SPRING_DATASOURCE_PASSWORD=postgres
 

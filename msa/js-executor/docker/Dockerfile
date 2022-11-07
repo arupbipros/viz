@@ -1,4 +1,4 @@
-FROM thingsboard/node:16.17.0-bullseye-slim
+FROM vizzionnaire/node:16.17.0-bullseye-slim
 
 ENV NODE_ENV production
 ENV DOCKER_MODE true

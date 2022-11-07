@@ -2,7 +2,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.thingsboard</groupId>
+        <groupId>com.vizzionnaire</groupId>
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
@@ -32,7 +32,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>ui-ngx</artifactId>
             <version>${project.version}</version>
             <type>jar</type>
@@ -100,7 +100,7 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.thingsboard</groupId>
+                                    <groupId>com.vizzionnaire</groupId>
                                     <artifactId>ui-ngx</artifactId>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

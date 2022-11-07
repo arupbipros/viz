@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.thingsboard</groupId>
-    <artifactId>thingsboard</artifactId>
+    <groupId>com.vizzionnaire</groupId>
+    <artifactId>vizzionnaire</artifactId>
     <version>3.4.1</version>
     <packaging>pom</packaging>
 
@@ -15,7 +15,7 @@
         <pkg.disabled>true</pkg.disabled>
         <pkg.process-resources.phase>none</pkg.process-resources.phase>
         <pkg.package.phase>none</pkg.package.phase>
-        <pkg.user>thingsboard</pkg.user>
+        <pkg.user>vizzionnaire</pkg.user>
         <pkg.implementationTitle>${project.name}</pkg.implementationTitle>
         <pkg.unixLogFolder>/var/log/${pkg.name}</pkg.unixLogFolder>
         <pkg.installFolder>/usr/share/${pkg.name}</pkg.installFolder>
@@ -766,57 +766,57 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.thingsboard</groupId>
+                <groupId>com.vizzionnaire</groupId>
                 <artifactId>netty-mqtt</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>data</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>util</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>version-control</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>cache</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>actor</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>dao-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>cluster-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.rule-engine</groupId>
+                <groupId>com.vizzionnaire.rule-engine</groupId>
                 <artifactId>rule-engine-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.rule-engine</groupId>
+                <groupId>com.vizzionnaire.rule-engine</groupId>
                 <artifactId>rule-engine-components</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>message</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -856,38 +856,38 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>edge-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard</groupId>
+                <groupId>com.vizzionnaire</groupId>
                 <artifactId>dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>queue</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>stats</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard.common</groupId>
+                <groupId>com.vizzionnaire.common</groupId>
                 <artifactId>coap-server</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard</groupId>
+                <groupId>com.vizzionnaire</groupId>
                 <artifactId>tools</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard</groupId>
+                <groupId>com.vizzionnaire</groupId>
                 <artifactId>rest-client</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
@@ -949,7 +949,7 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.thingsboard</groupId>
+                <groupId>com.vizzionnaire</groupId>
                 <artifactId>dao</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>

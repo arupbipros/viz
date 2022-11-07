@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.thingsboard</groupId>
+        <groupId>com.vizzionnaire</groupId>
         <version>3.4.1</version>
         <artifactId>msa</artifactId>
     </parent>
@@ -77,15 +77,15 @@
             <artifactId>guava</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>netty-mqtt</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>tools</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.thingsboard</groupId>
+            <groupId>com.vizzionnaire</groupId>
             <artifactId>rest-client</artifactId>
         </dependency>
         <dependency>

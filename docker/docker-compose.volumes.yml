@@ -3,16 +3,16 @@ version: '2.2'
 services:
   tb-core1:
     volumes:
-      - tb-log-volume:/var/log/thingsboard
+      - tb-log-volume:/var/log/vizzionnaire
   tb-core2:
     volumes:
-      - tb-log-volume:/var/log/thingsboard
+      - tb-log-volume:/var/log/vizzionnaire
   tb-rule-engine1:
     volumes:
-      - tb-log-volume:/var/log/thingsboard
+      - tb-log-volume:/var/log/vizzionnaire
   tb-rule-engine2:
     volumes:
-      - tb-log-volume:/var/log/thingsboard
+      - tb-log-volume:/var/log/vizzionnaire
   tb-coap-transport:
     volumes:
       - tb-coap-transport-log-volume:/var/log/tb-coap-transport
