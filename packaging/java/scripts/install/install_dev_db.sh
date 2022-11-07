@@ -23,9 +23,9 @@ sudo -u "$run_user" -s /bin/sh -c "java -cp ${jarfile} $JAVA_OPTS -Dloader.main=
                     org.springframework.boot.loader.PropertiesLauncher"
 
 if [ $? -ne 0 ]; then
-    echo "ThingsBoard DB installation failed!"
+    echo "Vizzionnaire DB installation failed!"
 else
-    echo "ThingsBoard DB installed successfully!"
+    echo "Vizzionnaire DB installed successfully!"
 fi
 
 exit $?

@@ -1,5 +1,5 @@
 export const environment = {
-  appTitle: 'ThingsBoard',
+  appTitle: 'Vizzionnaire',
   production: true,
 // @ts-ignore
   tbVersion: TB_VERSION,

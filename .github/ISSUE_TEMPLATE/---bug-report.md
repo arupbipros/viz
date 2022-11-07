@@ -16,7 +16,7 @@ A clear and concise description of what the bug is.
 * cloud.thingsboard.io
 * own setup
   * cloud or local infrastructure or docker deployment
-  * ThingsBoard Version
+  * Vizzionnaire Version
   * OS Name and Version
 
 **Your Client Environment**

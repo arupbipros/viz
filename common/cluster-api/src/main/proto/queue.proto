@@ -865,7 +865,7 @@ message VersionControlResponseMsg {
  * Main messages;
  */
 
-/* Request from Transport Service to ThingsBoard Core Service */
+/* Request from Transport Service to Vizzionnaire Core Service */
 message TransportApiRequestMsg {
   ValidateDeviceTokenRequestMsg validateTokenRequestMsg = 1;
   ValidateDeviceX509CertRequestMsg validateX509CertRequestMsg = 2;
@@ -883,7 +883,7 @@ message TransportApiRequestMsg {
   GetAllQueueRoutingInfoRequestMsg getAllQueueRoutingInfoRequestMsg = 14;
 }
 
-/* Response from ThingsBoard Core Service to Transport Service */
+/* Response from Vizzionnaire Core Service to Transport Service */
 message TransportApiResponseMsg {
   ValidateDeviceCredentialsResponseMsg validateCredResponseMsg = 1;
   GetOrCreateDeviceFromGatewayResponseMsg getOrCreateDeviceResponseMsg = 2;
@@ -898,7 +898,7 @@ message TransportApiResponseMsg {
   repeated GetQueueRoutingInfoResponseMsg getQueueRoutingInfoResponseMsgs = 11;
 }
 
-/* Messages that are handled by ThingsBoard Core Service */
+/* Messages that are handled by Vizzionnaire Core Service */
 message ToCoreMsg {
   TransportToDeviceActorMsg toDeviceActorMsg = 1;
   DeviceStateServiceMsgProto deviceStateServiceMsg = 2;
@@ -908,7 +908,7 @@ message ToCoreMsg {
   DeviceActivityProto deviceActivityMsg = 6;
 }
 
-/* High priority messages with low latency are handled by ThingsBoard Core Service separately */
+/* High priority messages with low latency are handled by Vizzionnaire Core Service separately */
 message ToCoreNotificationMsg {
   LocalSubscriptionServiceMsgProto toLocalSubscriptionServiceMsg = 1;
   FromDeviceRPCResponseProto fromDeviceRpcResponse = 2;
@@ -919,7 +919,7 @@ message ToCoreNotificationMsg {
   VersionControlResponseMsg vcResponseMsg = 7;
 }
 
-/* Messages that are handled by ThingsBoard RuleEngine Service */
+/* Messages that are handled by Vizzionnaire RuleEngine Service */
 message ToRuleEngineMsg {
   int64 tenantIdMSB = 1;
   int64 tenantIdLSB = 2;
@@ -935,7 +935,7 @@ message ToRuleEngineNotificationMsg {
   QueueDeleteMsg queueDeleteMsg = 4;
 }
 
-/* Messages that are handled by ThingsBoard Transport Service */
+/* Messages that are handled by Vizzionnaire Transport Service */
 message ToTransportMsg {
   int64 sessionIdMSB = 1;
   int64 sessionIdLSB = 2;

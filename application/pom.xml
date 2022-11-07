@@ -341,14 +341,14 @@
                 <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>true</filtering>
                 <includes>
-                    <include>thingsboard.yml</include>
+                    <include>vizzionnaire.yml</include>
                 </includes>
             </resource>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>false</filtering>
                 <excludes>
-                    <exclude>thingsboard.yml</exclude>
+                    <exclude>vizzionnaire.yml</exclude>
                 </excludes>
             </resource>
         </resources>
@@ -362,7 +362,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <systemPropertyVariables>
-                        <spring.config.name>thingsboard</spring.config.name>
+                        <spring.config.name>vizzionnaire</spring.config.name>
                     </systemPropertyVariables>
                     <excludes>
                         <exclude>**/nosql/*Test.java</exclude>

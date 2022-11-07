@@ -28,7 +28,7 @@ upgradeversion=${DATA_FOLDER}/.upgradeversion
 
 source "${CONF_FOLDER}/${configfile}"
 
-echo "Starting ThingsBoard installation ..."
+echo "Starting Vizzionnaire installation ..."
 
 set -e
 

@@ -19,7 +19,7 @@ assignees: ashvayka
 A clear and concise details.
 
 **Environment**
-<!-- Add information about your environment and ThingsBoard version if applicable -->
+<!-- Add information about your environment and Vizzionnaire version if applicable -->
  * OS:  name and version
- * ThingsBoard: version
+ * Vizzionnaire: version
  * Browser: name and version

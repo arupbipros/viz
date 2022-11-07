@@ -100,7 +100,7 @@
     <!-- <distributionManagement>
         <repository>
             <id>thingsboard-repo-deploy</id>
-            <name>ThingsBoard Repo Deployment</name>
+            <name>Vizzionnaire Repo Deployment</name>
             <url>https://repo.thingsboard.io/artifactory/libs-release-public</url>
         </repository>
     </distributionManagement> -->

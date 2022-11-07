@@ -8,7 +8,7 @@ import "queue.proto";
 
 package edge;
 
-// Interface exported by the ThingsBoard Edge Transport.
+// Interface exported by the Vizzionnaire Edge Transport.
 service EdgeRpcService {
 
   rpc handleMsgs(stream RequestMsg) returns (stream ResponseMsg) {}

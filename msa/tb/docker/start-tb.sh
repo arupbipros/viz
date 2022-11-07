@@ -13,14 +13,14 @@ if [ ! -f ${firstlaunch} ]; then
 fi
 
 if [ -f ${firstlaunch} ]; then
-    echo "Starting ThingsBoard ..."
+    echo "Starting Vizzionnaire ..."
 
     java -cp ${jarfile} $JAVA_OPTS -Dloader.main=org.thingsboard.server.ThingsboardServerApplication \
                         -Dspring.jpa.hibernate.ddl-auto=none \
                         -Dlogging.config=${CONF_FOLDER}/logback.xml \
                         org.springframework.boot.loader.PropertiesLauncher
 else
-    echo "ERROR: ThingsBoard is not installed"
+    echo "ERROR: Vizzionnaire is not installed"
 fi
 
 stop-db.sh

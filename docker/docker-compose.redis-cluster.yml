@@ -72,7 +72,7 @@ services:
       - 'REDIS_CLUSTER_REPLICAS=1'
       - 'REDIS_CLUSTER_CREATOR=yes'
 
-# ThingsBoard setup to use redis-cluster
+# Vizzionnaire setup to use redis-cluster
   tb-core1:
     env_file:
       - cache-redis-cluster.env

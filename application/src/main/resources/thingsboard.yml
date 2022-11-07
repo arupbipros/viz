@@ -870,10 +870,10 @@ swagger:
   api_path_regex: "${SWAGGER_API_PATH_REGEX:/api/.*}"
   security_path_regex: "${SWAGGER_SECURITY_PATH_REGEX:/api/.*}"
   non_security_path_regex: "${SWAGGER_NON_SECURITY_PATH_REGEX:/api/(?:noauth|v1)/.*}"
-  title: "${SWAGGER_TITLE:ThingsBoard REST API}"
-  description: "${SWAGGER_DESCRIPTION: ThingsBoard open-source IoT platform REST API documentation.}"
+  title: "${SWAGGER_TITLE:Vizzionnaire REST API}"
+  description: "${SWAGGER_DESCRIPTION: Vizzionnaire open-source IoT platform REST API documentation.}"
   contact:
-    name: "${SWAGGER_CONTACT_NAME:ThingsBoard team}"
+    name: "${SWAGGER_CONTACT_NAME:Vizzionnaire team}"
     url: "${SWAGGER_CONTACT_URL:https://thingsboard.io}"
     email: "${SWAGGER_CONTACT_EMAIL:info@thingsboard.io}"
   license:

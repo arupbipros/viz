@@ -13,7 +13,7 @@ services:
     volumes:
       - ./tb-node/redis-data:/bitnami/redis/data
 
-# ThingsBoard setup to use redis-standalone
+# Vizzionnaire setup to use redis-standalone
   tb-core1:
     env_file:
       - cache-redis.env

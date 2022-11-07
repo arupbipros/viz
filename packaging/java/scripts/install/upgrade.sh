@@ -38,9 +38,9 @@ su -s /bin/sh -c "java -cp ${jarfile} $JAVA_OPTS -Dloader.main=org.thingsboard.s
                     org.springframework.boot.loader.PropertiesLauncher" "$run_user"
 
 if [ $? -ne 0 ]; then
-    echo "ThingsBoard upgrade failed!"
+    echo "Vizzionnaire upgrade failed!"
 else
-    echo "ThingsBoard upgraded successfully!"
+    echo "Vizzionnaire upgraded successfully!"
 fi
 
 exit $?

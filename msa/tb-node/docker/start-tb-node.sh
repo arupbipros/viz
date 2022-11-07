@@ -18,7 +18,7 @@ if [ "$INSTALL_TB" == "true" ]; then
         loadDemo=false
     fi
 
-    echo "Starting ThingsBoard installation ..."
+    echo "Starting Vizzionnaire installation ..."
 
     exec java -cp ${jarfile} $JAVA_OPTS -Dloader.main=org.thingsboard.server.ThingsboardInstallApplication \
                         -Dinstall.load_demo=${loadDemo} \
@@ -29,7 +29,7 @@ if [ "$INSTALL_TB" == "true" ]; then
 
 elif [ "$UPGRADE_TB" == "true" ]; then
 
-    echo "Starting ThingsBoard upgrade ..."
+    echo "Starting Vizzionnaire upgrade ..."
 
     if [[ -z "${FROM_VERSION// }" ]]; then
         echo "FROM_VERSION variable is invalid or unspecified!"

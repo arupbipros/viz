@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  appTitle: 'ThingsBoard',
+  appTitle: 'Vizzionnaire',
   production: false,
 // @ts-ignore
   tbVersion: TB_VERSION,

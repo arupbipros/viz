@@ -15,7 +15,7 @@ let connections: Socket[] = [];
 
 (async() => {
     try {
-        logger.info('Starting ThingsBoard Web UI Microservice...');
+        logger.info('Starting Vizzionnaire Web UI Microservice...');
 
         const bindAddress: string = config.get('server.address');
         const bindPort = Number(config.get('server.port'));
@@ -27,9 +27,9 @@ let connections: Socket[] = [];
 
         logger.info('Bind address: %s', bindAddress);
         logger.info('Bind port: %s', bindPort);
-        logger.info('ThingsBoard Enable Proxy: %s', thingsboardEnableProxy);
-        logger.info('ThingsBoard host: %s', thingsboardHost);
-        logger.info('ThingsBoard port: %s', thingsboardPort);
+        logger.info('Vizzionnaire Enable Proxy: %s', thingsboardEnableProxy);
+        logger.info('Vizzionnaire host: %s', thingsboardHost);
+        logger.info('Vizzionnaire port: %s', thingsboardPort);
 
         const useApiProxy = thingsboardEnableProxy === "true";
 
@@ -58,9 +58,9 @@ let connections: Socket[] = [];
                     res.writeHead(500);
                     const error = err as any;
                     if (error.code && error.code === 'ECONNREFUSED') {
-                        res.end('Unable to connect to ThingsBoard server.');
+                        res.end('Unable to connect to Vizzionnaire server.');
                     } else {
-                        res.end('ThingsBoard server connection error: ' + error.code ? error.code : '');
+                        res.end('Vizzionnaire server connection error: ' + error.code ? error.code : '');
                     }
                 }
             });
@@ -87,9 +87,9 @@ let connections: Socket[] = [];
 
         server.listen(bindPort, bindAddress, () => {
             logger.info('==> 🌎  Listening on port %s.', bindPort);
-            logger.info('Started ThingsBoard Web UI Microservice.');
+            logger.info('Started Vizzionnaire Web UI Microservice.');
         }).on('error', async (error) => {
-            logger.error('Failed to start ThingsBoard Web UI Microservice: %s', error.message);
+            logger.error('Failed to start Vizzionnaire Web UI Microservice: %s', error.message);
             logger.error(error.stack);
             await exit(-1);
         });
@@ -100,7 +100,7 @@ let connections: Socket[] = [];
         });
 
     } catch (e: any) {
-        logger.error('Failed to start ThingsBoard Web UI Microservice: %s', e.message);
+        logger.error('Failed to start Vizzionnaire Web UI Microservice: %s', e.message);
         logger.error(e.stack);
         await exit(-1);
     }
@@ -114,7 +114,7 @@ let connections: Socket[] = [];
 })
 
 process.on('exit', async (code: number) => {
-    logger.info(`ThingsBoard Web UI Microservice has been stopped. Exit code: ${code}.`);
+    logger.info(`Vizzionnaire Web UI Microservice has been stopped. Exit code: ${code}.`);
 });
 
 async function exit(status: number) {

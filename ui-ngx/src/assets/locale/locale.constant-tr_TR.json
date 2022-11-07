@@ -2109,10 +2109,10 @@
       "file-storage": "Dosya depolama",
       "memory-storage": "Bellek depolama"
     },
-    "thingsboard": "ThingsBoard",
-    "thingsboard-host": "ThingsBoard host",
+    "thingsboard": "Vizzionnaire",
+    "thingsboard-host": "Vizzionnaire host",
     "thingsboard-host-required": "Host gerekli.",
-    "thingsboard-port": "ThingsBoard port",
+    "thingsboard-port": "Vizzionnaire port",
     "thingsboard-port-max": "Maksimum port numarası 65535.",
     "thingsboard-port-min": "Minimum port numarası 1'dir.",
     "thingsboard-port-pattern": "Port geçerli değil.",
@@ -2569,7 +2569,7 @@
     "tenant-required": "Tenant gerekli",
     "search": "Tenantları ara",
     "selected-tenants": "{ count, plural, 1 {1 tenant} other {# tenant} } seçildi",
-    "isolated-tb-rule-engine": "ThingsBoard soyutlanmış kural yönetimi konteynerda işlensin",
+    "isolated-tb-rule-engine": "Vizzionnaire soyutlanmış kural yönetimi konteynerda işlensin",
     "isolated-tb-rule-engine-details": "Her soyutlanmış tenant ayrı bir mikro servis gerektirir"
   },
   "tenant-profile": {
